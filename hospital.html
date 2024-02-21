@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>hospital list</title>
+    <!-- bootsrap link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- font awesome link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'hospital.css'%}">
+	<link rel="stylesheet" href="{% static 'style.css'%}">
+	<style>
+		.book_button a{
+text-decoration:none;
+}
+
+	</style>
+</head>
+<body>
+
+<div class="container-fluid mobile_section">
+        <div class="row">
+            <div class="logo_at_mobile">
+                <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+                <a href="#"><span onclick="show_menu()"><i class="fa fa-bars"></i> MENU</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section1">
+        <div class="row">
+            <div class="col-md-3 logo">
+                <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+            </div>
+            <div class="col-md-6 nav_itmes">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="#">SUPPLY</a></li>
+                    <li><a href="{% url 'hospage' %}">HOSPITALS</a></li>
+                    <li><a href="#">EMERGENCY</a></li>
+                    <li><a href="#">APPOINTMENT</a></li>
+                    <li><a href="#">REMOTE </a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 book_button">
+                <button ><a href="{% url 'emergencyfrom' %}">Ambulance</a> <span><ion-icon name="pulse-outline"></ion-icon></span></button>
+            </div>
+        </div>
+    </div>
+<!--main page-->
+<div class="container">
+	<span class="close-btn">x</span>
+
+			<h3 class="heading"><i class="fa-solid fa-house-medical-circle-check"></i>16 Hospital Available In Bhopal</h3>
+		<hr/>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/aiims.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>AIIMS Bhopal</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon">
+					</i>Saket Nagar suburb of Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07552982607</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</i></a>
+				</div>
+				<div class="col-md-3 host-btn" >
+					<button type="button" class="btn btn-info">Advance Form </button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3 hos-1">
+					<img src="{% static 'img/bansal.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Bansal Bhopal</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Shahpura Lake, Shahpura, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07554086099</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star "></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="{% url 'hospital_list' %}">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info"><a href="{% url 'patient' %}">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/chirayu.png'%}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Chirayu Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Bhainsakhedi,Near Bairagarh Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07552709100</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/hamidia.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Hamidia Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Sultania Road, Bhopal.</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>7554050450</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/people.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>People's Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Bhanpur Bypass Road Bhopal.</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07554005200</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/mims.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Mahaveer Institute of Medical Sciences and Research (MIMS)</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Near RGPV, Adjacent to IT Park, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>9109114000</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/apollo.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Apollo Sage Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Aakriti Ecocity, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07553505050</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/roshan.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Roshan Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Govindpura, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>9111222234</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">VISIT</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/jawahar.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Jawaharlal Nehru Cancer Hospital and Research Centre</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>IDGAH Hills, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07552665720</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/sultania.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Sultania Zanana Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Sultania Road,Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07552711914</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/anant.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Anant Shree Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Indrapuri Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>7552601256</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/jk.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>J K Hospital & Medical Research Centre</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Kolar Road, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>7554087000</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/citi.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Citi Multispeciality Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Gautam Nagar-Govindpura, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>07554272669</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button
+					" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/sai.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Shri Sai Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Karond, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>9893565702</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/zindal.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>Zindal Hospital</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Ayodhya Bypass Rd, Village Damkheda, Gram, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>7554848100</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+		<div class="row hospital-section">
+				<div class="col-md-3">
+					<img src="{% static 'img/memorial.png' %}" width="100%">
+				</div>
+				<div class="col-md-6 host-content">
+					<h4>BMHRC ( Bhopal Memorial Hospital and Research Centre)</h4>
+					<h6><i class="fa-sharp fa-solid fa-location-dot host-icon"></i>Bhopal Bypass Rd, BMHRC Campus, Karond, Bhopal</h6>
+					<h6><i class="fa-sharp fa-solid fa-phone host-icon"></i>7552742212</h6>
+					<p class="host-rate">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</p>
+					<a href="#">Read More</a>
+				</div>
+				<div class="col-md-3 host-btn">
+					<button type="button" class="btn btn-info">Advance Form</button>
+				</div>
+		</div>
+	</div>
+<!--app secton-->
+ <div class="container-fluid app-section">
+        <div class="container-fluid temp">
+            <div class="container app">
+                <div class="row">
+                    <div class="col-md-6 download-text">
+                        <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+                        <h1>Download Our Emergency App</h1>
+                        <p><span>Rate : 5.0</span> Download and register now and get everyone secured nearby you and
+                            your special one's</p>
+                        <button>Download Now</button>
+                    </div>
+                    <div class="col-md-6 phone-img">
+                        <center><img src="{% static 'img/phone.png' %}" alt=""></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--footer-->
+<div class="container-fluid blur_div">
+        <div class="container-fluid footer-section">
+            <div class="container footer-contianer">
+                <div class="row">
+                    <div class="col-md-2 footer_items">
+                        <h4>Saviour</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>For Customers</h4>
+                        <ul>
+                            <li><a href="#">Search For Hospital</a></li>
+                            <li><a href="#">Advance Form Filling</a></li>
+                            <li><a href="#">Emergency Advise</a></li>
+                            <li><a href="#">Ambulance Booking</a></li>
+                            <li><a href="#">Medical Supply</a></li>
+                            <li><a href="#">Appointment Booking</a></li>
+                            <li><a href="#">Doctors Contacts</a></li>
+                            <li><a href="#">Equipment Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>Remote Access</h4>
+                        <ul>
+                            <li><a href="#">Ventilator Availability</a></li>
+                            <li><a href="#">Oxygen Cyllinder</a></li>
+                            <li><a href="#">Bed Availability</a></li>
+                            <li><a href="#">Medicine Facility</a></li>
+                            <li><a href="#">Doctors Availability</a></li>
+                            <li><a href="#">Nearest Hospital</a></li>
+                            <li><a href="#">Best Hospital in Cities</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>For Hospitals</h4>
+                        <ul>
+                            <li><a href="#">Doctors Reach</a></li>
+                            <li><a href="#">Medical Supply</a></li>
+                            <li><a href="#">Ambulance Supply</a></li>
+                            <li><a href="#">Saviour Reach</a></li>
+                            <li><a href="#">Hospital Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            </li>
+                            <li><a href="#">Developers</a>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Healthcare Directory</a></li>
+                            <li><a href="#">Saviuor Health Wiki</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container footer-logo">
+                    <center><a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="text/javascript">
+		var closebtns = document.getElementsByClassName("close-btn");
+        var i;
+        for (i = 0; i < closebtns.length; i++) {
+        closebtns[i].addEventListener("click", function() {
+        this.parentElement.style.display = 'none';
+        window.location.href = 'home.html';
+        });
+       }
+	</script>
+</body>
+</html>

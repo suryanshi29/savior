@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data" action="updaterecord/{{update_data.id}}">
+    {% csrf_token %}
+    name<input type="text" name="name" value="{{update_data.name}}"><br>
+    password<input type="password" name="password" value="{{update_data.password}}"><br>
+    image<input type="file" name="image" ><br>
+    <input type="submit">
+</form>
+</body>
+</html>

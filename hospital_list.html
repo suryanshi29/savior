@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'hospital_list.css' %}">
+
+    <!-- bootsrap link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        
+    
+        <!-- font awesome link -->
+      <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&family=Water+Brush&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&family=Water+Brush&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Water+Brush&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <div class="container-fluid nav_container" id="temp">
+        <div class="nav_at_media" id="navbar_at_media">
+            <div class="logo">
+                <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a> <a href="#"><span onclick="hide()"><ion-icon
+                            name="close-circle-outline"></ion-icon></span></a>
+            </div>
+            <ul>
+                <li><a href="#"><span><ion-icon name="home-outline"></ion-icon> </span> HOME</a></li>
+                <li><a href="#"><span><ion-icon name="fitness-outline"></ion-icon> </span> SUPPLY</a></li>
+                <li><a href="#"><span><ion-icon name="storefront-outline"></ion-icon> </span> HOSPITALS</a></li>
+                <li><a href="#"><span><ion-icon name="pulse-outline"></ion-icon> </span> EMERGENCY</a></li>
+                <li><a href="#"><span><ion-icon name="document-text-outline"></ion-icon></ion-icon> </span>
+                        APPOINTMENT</a></li>
+                <li><a href="#"><span><ion-icon name="id-card-outline"></ion-icon> </span> REMOTE </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid mobile_section">
+        <div class="row">
+            <div class="logo_at_mobile">
+                <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+                <a href="#"><span onclick="show_menu()"><i class="fa fa-bars"></i> MENU</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section1">
+        <div class="row">
+            <div class="col-md-3 logo">
+                <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+            </div>
+            <div class="col-md-6 nav_itmes">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SUPPLY</a></li>
+                    <li><a href="#">HOSPITALS</a></li>
+                    <li><a href="#">EMERGENCY</a></li>
+                    <li><a href="#">APPOINTMENT</a></li>
+                    <li><a href="#">REMOTE </a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 book_button">
+                <button>Ambulance <span><ion-icon name="pulse-outline"></ion-icon></span></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row container-fluid">
+        <div class="pl-8 pt-4 col-md-6 container-fluid">
+            <div class="flex ">
+                <div class="pr-2 ">
+                    <img class="pb-2" src="{% static 'img/bansal.png' %}" alt="">
+                </div>
+                <div class="brand-name">
+                    <p class="text-4xl py-2 font-semibold">
+                        Bansal Hospital
+                    </p>
+                  
+                    <p>
+                      <h6><i class="fa-sharp fa-solid fa-location-dot host-icon py-2"></i> Shahpura Lake, Shahpura, Bhopal</h6>
+                      <h6><i class="fa-sharp fa-solid fa-phone host-icon pb-2"></i> 07554086099</h6>
+                    </p>
+                    
+                    <button class="upgrade-btn lg:ml-24 mt-7 sm:self-center">Call An ambulance</button>
+                    
+                  </div>
+                </div>
+                <div class="">
+                  <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234511.2525640689!2d77.2354361282646!3d23.30711040650832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43bc9994d78d%3A0x7a01333cf1304a82!2sBansal%20Hospital!5e0!3m2!1sen!2sin!4v1695034614049!5m2!1sen!2sin" width="99%" height="254" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+    
+    
+          </div>
+  
+
+    <div class="plan col-md-6 container-fluid">
+		<div class="inner">
+            <center>
+                <p class="title">Info</p>
+            </center>
+			<p class="info">Services we offer.</p>
+			<ul class="features">
+				<li>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span><strong></strong> Fleet of fully equipped Ambulances</span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span>ICU On Wheels</span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span>Pick up & Drop Facility</span>
+				</li>
+				<li>
+					<span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span>Advance ATLS trauma support</span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span>Exclusive fully fledged emergency OT</span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span>24/7 back up support with diagnostic imaging and laboratory facilities</span>
+				</li>
+				<li>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+                            <rect fill="black" rx="8" height="16" width="16"></rect>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+                        </svg>
+					</span>
+					<span>Management of all kinds of medical and surgical emergencies including Poly Trauma</span>
+				</li>
+			</ul>
+			<div class="action">
+			<a class="upgrade-btn" href="#">
+				Book an Appointment
+			</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="container-fluid">
+    <center>
+      <p class="text-4xl py-9">Remote Access</p>
+    </center>
+    <div class="container-fluid bed-count row pb-4 pl-5">
+      <img class="col-md-4 pt-2 " src="{% static 'img/bed-data1.png' %}" alt="">
+      <img class="col-md-4 pt-2 " src="{% static 'img/data2.png' %}" alt="">
+      <img class="col-md-4 pt-2" src="{% static 'img/staff2.png' %}" alt="">
+    </div>
+
+  </div>
+
+
+    <div class="container-fluid app-section">
+        <div class="container-fluid temp">
+            <div class="container app">
+                <div class="row">
+                    <div class="col-md-6 download-text">
+                        <a href="#"><img class="" src="{% static 'img/logo.jpg' %}" alt=""></a>
+                            <h1 class="text-3xl pl-14">Download Our Emergency App</h1>
+                            <p class="text-2xl pl-14"><span>Rate : 5.0</span> Download and register now and get everyone secured nearby you and
+                                your special one's</p>
+                            <button class="ml-14 mt-3">Download Now</button>
+                    </div>
+                    <div class="col-md-6 phone-img">
+                        <center><img src="{% static 'img/phone.png' %}" alt=""></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid blur_div">
+        <div class="container-fluid footer-section">
+            <div class="container footer-contianer">
+                <div class="row">
+                    <div class="col-md-2 footer_items">
+                        <h4>Saviour</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>For Customers</h4>
+                        <ul>
+                            <li><a href="#">Search For Hospital</a></li>
+                            <li><a href="#">Advance Form Filling</a></li>
+                            <li><a href="#">Emergency Advise</a></li>
+                            <li><a href="#">Ambulance Booking</a></li>
+                            <li><a href="#">Medical Supply</a></li>
+                            <li><a href="#">Appointment Booking</a></li>
+                            <li><a href="#">Doctors Contacts</a></li>
+                            <li><a href="#">Equipment Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>Remote Access</h4>
+                        <ul>
+                            <li><a href="#">Ventilator Availability</a></li>
+                            <li><a href="#">Oxygen Cyllinder</a></li>
+                            <li><a href="#">Bed Availability</a></li>
+                            <li><a href="#">Medicine Facility</a></li>
+                            <li><a href="#">Doctors Availability</a></li>
+                            <li><a href="#">Nearest Hospital</a></li>
+                            <li><a href="#">Best Hospital in Cities</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>For Hospitals</h4>
+                        <ul>
+                            <li><a href="#">Doctors Reach</a></li>
+                            <li><a href="#">Medical Supply</a></li>
+                            <li><a href="#">Ambulance Supply</a></li>
+                            <li><a href="#">Saviour Reach</a></li>
+                            <li><a href="#">Hospital Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            </li>
+                            <li><a href="#">Developers</a>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Healthcare Directory</a></li>
+                            <li><a href="#">Saviuor Health Wiki</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container footer-logo">
+                    <center><a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function show_menu() {
+            let navbar = document.getElementById('temp');
+            navbar.style.display = "block";
+        }
+        function hide() {
+            let navbar = document.getElementById('temp');
+            navbar.style.display = "none"
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

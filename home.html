@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home page</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&family=Water+Brush&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&family=Water+Brush&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Water+Brush&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FontName">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Comfortaa;
+
+}
+.tagline button{
+    width: 20%;
+    background-color: rgb(47, 189, 255);
+    color: black;
+    border: 1px solid rgb(47, 189, 255);
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    padding: 25px 10px;
+    margin: 10px;
+}
+.tagline button:hover{
+    border: 1px solid rgb(47, 189, 255);
+    color: white;
+    background-color:transparent ;
+
+}
+.book_button button a{
+text-decoration:none;
+color:rgb(47, 189, 255);
+}
+.book_button button a:hover{
+color:white;
+}
+.app-section{
+    background-image: url(bg3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.download-text {
+
+    padding:5%;
+    color: white;
+}
+.download-text a img{
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin: 10% 0%;
+}
+.download-text p span{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.download-text button {
+    width: 35%;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(47, 189, 255);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    padding: 3% 2%;
+
+}
+
+.download-text button:hover {
+    border: 1px solid rgb(47, 189, 255);
+    color: white;
+    background-color: rgb(47, 189, 255);
+}
+
+    </style>
+</head>
+<body>
+<!--nav bar-->
+ <div class="container-fluid nav_container" id="temp">
+        <div class="nav_at_media" id="navbar_at_media">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'img/logo.jpg' %}" alt=""></a> <a href="#"><span onclick="hide()"><ion-icon
+                            name="close-circle-outline"></ion-icon></span></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}"><span><ion-icon name="home-outline"></ion-icon> </span> HOME</a></li>
+                <li><a href="#"><span><ion-icon name="fitness-outline"></ion-icon> </span> SUPPLY</a></li>
+                <li><a href="{% url 'hospage' %}"><span><ion-icon name="storefront-outline"></ion-icon> </span> HOSPITALS</a></li>
+                <li><a href="#"><span><ion-icon name="pulse-outline"></ion-icon> </span> EMERGENCY</a></li>
+                <li><a href="#"><span><ion-icon name="document-text-outline"></ion-icon></ion-icon> </span>
+                        APPOINTMENT</a></li>
+                <li><a href="#"><span><ion-icon name="id-card-outline"></ion-icon> </span> REMOTE </a></li>
+            </ul>
+        </div>
+    </div>
+<div class="container-fluid mobile_section">
+        <div class="row">
+            <div class="logo_at_mobile">
+                <a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+                <a href="#"><span onclick="show_menu()"><i class="fa fa-bars"></i> MENU</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section1">
+        <div class="row">
+            <div class="col-md-3 logo">
+                <a href="{% url 'home' %}"><img src="{% static 'img/logo.jpg' %}" alt=""></a>
+            </div>
+            <div class="col-md-6 nav_itmes">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="#">SUPPLY</a></li>
+                    <li><a href="{% url 'hospage' %}">HOSPITALS</a></li>
+                    <li><a href="">EMERGENCY</a></li>
+                    <li><a href="#">APPOINTMENT</a></li>
+                    <li><a href="#">REMOTE </a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 book_button">
+
+                <button ><a href="{% url 'emergencyfrom' %}">Ambulance</a> <span><ion-icon name="pulse-outline"></ion-icon></span></button>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid section2">
+        <div class="container-fluid sub-div">
+            <div class="row">
+                <div class="col-md-8 tagline">
+                    <h1 class="heading">
+                        WE BELIEVE THAT EVERY LAST PULSE IS PRICELESS SO LET'S UNITE TO SAVE GOD'S CREATION
+                    </h1>
+                    <h3>
+                        As a leading industry, Saviour is opening an exciting free medical camp and opportunities for
+                        doctors and patients, investors , employees & supplier. Contact us to find out what we are
+                        offering
+                    </h3>
+                    <button>REMOTE ACCESS</button>
+                    <button>24 X 7 SUPPORT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section3">
+        <div class="container about_us">
+            <div class="row">
+                <div class="col-md-6 img_section">
+                    <center><img src="{% static 'img/img1.jpg'%}" alt=""></center>
+                </div>
+                <div class="col-md-6 details_about_us">
+                    <h1>ABOUT US</h1>
+                    <h5>Vestibulum condimentum, risus sedones honcus rutrum, salah lacus mollis zurna, nec finibusmi
+                        velit advertisis. Proin vitae odin quis magna aliquet laciniae. Etiam auctor, nisi vel.
+                        Pellentesque ultrices nisl quam iaculis, nec pulvinar augue.</h5>
+                    <p>Experienced Staff <span>80%</span></p>
+                    <div class="line1">
+                        <div id="sub-line1"></div>
+                    </div>
+                    <p>Modern Equipments <span>65%</span></p>
+                    <div class="line1">
+                        <div id="sub-line2"></div>
+                    </div>
+                    <p>Emmediate Response <span>90%</span></p>
+                    <div class="line1">
+                        <div id="sub-line3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section4">
+        <div class="container achieve">
+            <div class="row">
+                <div class="col-md-3 sub_part">
+                    <div class="icons">
+                        <center><ion-icon name="logo-react"></ion-icon></center>
+                    </div>
+                    <div class="number">
+                        <center>
+                            <h1>20</h1>
+                        </center>
+                    </div>
+                    <div class="icon_text">
+                        <h4>Years of Experience</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 sub_part">
+                    <div class="icons">
+                        <center><ion-icon name="heart-half-outline"></ion-icon></center>
+                    </div>
+                    <div class="number">
+                        <center>
+                            <h1>13Lacks +</h1>
+                        </center>
+                    </div>
+                    <div class="icon_text">
+                        <h4>Life Saved</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 sub_part">
+                    <div class="icons">
+                        <center><ion-icon name="bookmarks-outline"></ion-icon></center>
+                    </div>
+                    <div class="number">
+                        <center>
+                            <h1>120</h1>
+                        </center>
+                    </div>
+                    <div class="icon_text">
+                        <h4>Certificates</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 sub_part">
+                    <div class="icons">
+                        <center><ion-icon name="bag-check-outline"></ion-icon></center>
+                    </div>
+                    <div class="number">
+                        <center>
+                            <h1>40 +</h1>
+                        </center>
+                    </div>
+                    <div class="icon_text">
+                        <h4>Team Members</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section5">
+        <div class="container service_section">
+            <div class="row">
+                <div class="col-md-6 our_services">
+                    <div class="row">
+                        <h1>OUR SERVICES</h1>
+                        <div class="col-md-4 service_div">
+                            <div class="icons-2"><ion-icon name="car-outline"></ion-icon></div><a href="#">
+                                <h2>Ambulance Facility</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-4 service_div">
+                            <div class="icons-2"><ion-icon name="clipboard-outline"></ion-icon></div><a href="#">
+                                <h2>Advance Form Filling</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-4 service_div">
+                            <div class="icons-2"><ion-icon name="pulse-outline"></ion-icon></div><a href="#">
+                                <h2>Doctors Contact</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-4 service_div">
+                            <div class="icons-2"><ion-icon name="home-outline"></ion-icon></div><a href="#">
+                                <h2>Hospital Contact</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-4 service_div">
+                            <div class="icons-2"><ion-icon name="medkit-outline"></ion-icon></div><a href="#">
+                                <h2>Emergency Service</h2>
+                            </a>
+                        </div>
+                        <div class="col-md-4 service_div">
+                            <div class="icons-2"><ion-icon name="cellular-outline"></ion-icon></div><a href="#">
+                                <h2>Equipment Data</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 sevice_img">
+                    <img src="{% static 'img/img3.jpg'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid princing_sec">
+        <div class="container sec-5">
+            <h2>Advance Booking Pricing</h2>
+            <table class="table table-sm">
+                <thead>
+                    <tr class="table-head">
+                        <th scope="col">Services</th>
+                        <th scope="col">Stage</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-body">
+                        <td>Ventilator charge</td>
+                        <td>1 times</td>
+                        <td>Rs 150.00</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td>Oxygen charge</td>
+                        <td>1 times</td>
+                        <td>Rs 100.00</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td>Medical care charge</td>
+                        <td>1 times</td>
+                        <td>Rs 200.00</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td>Medical Report charge</td>
+                        <td>1 times</td>
+                        <td>Rs 300.00</td>
+                    </tr>
+                    <tr class="table-body">
+                        <td>Bed charges</td>
+                        <td>1 times</td>
+                        <td>Rs 500.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <center>
+                <button type="button" class="btn btn-info book-btn">Read More >></button>
+            </center>
+        </div>
+    </div>
+    <div class="container-fluid expertise">
+        <div class="container sec-7">
+            <h2>Our Expertise</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'img/am.jpg'%}" class="card-img-top" alt="..." class="doc-img">
+                        <div class="doc-name">
+                            <p>Ambulance Facility</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'img/fm1.jpg'%}" class="card-img-top" alt="..." width="100%">
+                        <div class="doc-name">
+                            <p>Advance Form Fill Facility</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'img/mm.jpg' %}" class="card-img-top" alt="..." width="100%">
+                        <div class="doc-name">
+                            <p>Medical Care Facility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec-9">
+        <div class="row section-part">
+            <div class="col-md-4">
+                <img src="{% static 'img/abc.jpg' %}" class="sec-9-image" width="50%">
+            </div>
+            <div class="col-md-8 section-para">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book.</p>
+                <p>"Lorem Ipsum"</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid last-section">
+        <div class="container new-section">
+            <h2>The latest news</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card news-effect">
+                        <img src="{% static 'img/xyz.jpg' %}" class="card-img-top" alt="..." width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title">Bed Availability</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. </p>
+                            <button type="button" class="btn btn-info">Read More >></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'img/xy.jpg'%}" class="card-img-top" alt="..." width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title">Ventilators Availability</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. </p>
+                            <button type="button" class="btn btn-info">Read More >></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'img/z.jpg' %}" class="card-img-top" alt="..." width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title">Oxygen Availability</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. </p>
+                            <button type="button" class="btn btn-info">Read More >></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="container-fluid app-section">
+       <div class="container-fluid temp">
+           <div class="container app">
+               <div class="row">
+                   <div class="col-md-6 download-text">
+                       <a href="{% url 'home' %}">
+                           <img src="{% static 'img/logo.jpg' %}">
+                       </a>
+                       <h1>Download Our Emergencay App</h1>
+                       <p><span>Rate : 5.0</span> Download and Register Now and Get Every One Secure Near By you and Your Spetial Once</p>
+                       <button>Download Now</button>
+                   </div>
+                   <div class="col-md-6 phone-img">
+                       <center>
+                           <img src="{% static 'img/phone.png' %}">
+                       </center>
+                   </div>
+               </div>
+               
+           </div>
+       </div>
+   </div>
+    <div class="container-fluid blur_div">
+        <div class="container-fluid footer-section">
+            <div class="container footer-contianer">
+                <div class="row">
+                    <div class="col-md-2 footer_items">
+                        <h4>Saviour</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>For Customers</h4>
+                        <ul>
+                            <li><a href="#">Search For Hospital</a></li>
+                            <li><a href="#">Advance Form Filling</a></li>
+                            <li><a href="#">Emergency Advise</a></li>
+                            <li><a href="#">Ambulance Booking</a></li>
+                            <li><a href="#">Medical Supply</a></li>
+                            <li><a href="#">Appointment Booking</a></li>
+                            <li><a href="#">Doctors Contacts</a></li>
+                            <li><a href="#">Equipment Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>Remote Access</h4>
+                        <ul>
+                            <li><a href="#">Ventilator Availability</a></li>
+                            <li><a href="#">Oxygen Cyllinder</a></li>
+                            <li><a href="#">Bed Availability</a></li>
+                            <li><a href="#">Medicine Facility</a></li>
+                            <li><a href="#">Doctors Availability</a></li>
+                            <li><a href="#">Nearest Hospital</a></li>
+                            <li><a href="#">Best Hospital in Cities</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>For Hospitals</h4>
+                        <ul>
+                            <li><a href="#">Doctors Reach</a></li>
+                            <li><a href="#">Medical Supply</a></li>
+                            <li><a href="#">Ambulance Supply</a></li>
+                            <li><a href="#">Saviour Reach</a></li>
+                            <li><a href="#">Hospital Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            </li>
+                            <li><a href="#">Developers</a>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Healthcare Directory</a></li>
+                            <li><a href="#">Saviuor Health Wiki</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer_items">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container footer-logo">
+                    <center><a href="#"><img src="{% static 'img/logo.jpg' %}" alt=""></a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'script.js' %}"></script>
+<!--icon scrpit-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>
